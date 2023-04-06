@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="./style-grid-responsive.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row project-title">
+            <h1>پروژه شماره 3</h1>
+        </div>
+        <div class="row form-container">
+            <div class="col-xs-12 col-s-12 col-md-8 col-lg-6 form-content">
+
+                <div class="card"></div>
+                <form class="card">
+                    <h2 class="title">ورود</h2>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" id="userName" />
+                            <label for="userName">نام کاربری</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" />
+                            <label for="password">رمز عبور</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit">بزن بریم</button>
+                        </div>
+                    </div>
+                </form>
+                <form class="card alt">
+                    <div class="toggle">
+                    </div>
+                    <div class="title-container">
+                        <h2 class="title">ثبت نام</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="email" id="email" />
+                            <label for="email">ایمیل</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="userName-register" />
+                            <label for="userName-register">نام کاربری</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password-register" />
+                            <label for="userName-register">رمز عبور</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit">ثبت‌‌ نام</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.toggle').on('click', function () {
+            $('.form-container').stop().addClass('active');
+        });
+        $('.close').on('click', function () {
+            $('.form-container').stop().removeClass('active');
+        });
+    });
+</script>
+</body>
+
+</html>

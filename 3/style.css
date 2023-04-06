@@ -1,0 +1,231 @@
+.project-title{
+    margin-top: 50px;
+}
+.project-title h1{
+    font-size: 34px;
+    text-align: center;
+    color: #000;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.form-content{
+    position: relative;
+}
+.form-content .card{
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 20%);
+    border-radius: 5px 5px 0 0;
+    padding: 60px 0 40px 20px;
+}
+.form-content .card:first-child{
+    background-color: #fafafa;
+    height: 10px;
+    margin: 0 8px;
+    padding: 0!important;
+}
+.form-content .card .title{
+    color: #ed2553;
+    font-size: 32px;
+    border-right:5px solid #ed2553 ;
+    padding: 10px 50px 30px 0;
+}
+
+.form-content .card-body .input-group{
+    position: relative;
+    margin: 30px 60px 50px 60px;
+}
+.form-content .card-body .input-group label{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #757575;
+    font-size: 24px;
+    transition: all .2s ease;
+}
+.form-content .card-body .input-group input:focus ~ label{
+    color: #9d9d9d;
+    transform: translate(-12%,-55%) scale(.75);
+}
+.form-content .card-body .input-group input{
+    /* position: relative; */
+    width: 100%;
+    color: #212121;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.form-content .card-body .input-group .bar{
+    position: absolute;
+    right:0 ;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #757575;
+}
+
+.form-content .card-body .input-group .bar::after,.form-content .card-body .input-group .bar::before{
+    content: '';
+    position: absolute;
+    background: #ed2553;
+    width: 0;
+    height: 2px;
+    transition: all .5s ease;
+}
+
+.form-content .card-body .input-group .bar::after{
+    left: 50%;
+}
+.form-content .card-body .input-group .bar::before{
+    right: 50%;
+}
+
+.form-content .card-body .input-group input:focus ~ .bar::after,
+.form-content .card-body .input-group input:focus ~ .bar::before{
+    width: 50%;
+}
+
+.form-content .card-body .button-container{
+    display: flex;
+    justify-content: center;
+}
+.form-content .card-body .button-container button{
+    border: none;
+    background-color: #fff;
+    color: #ddd;
+    font-size: 24px;
+    border: 2px solid #e3e3e3;
+    width: 40%;
+    padding: 13px 0;
+    cursor: pointer;
+    transition: color .2s , border-color .8s;
+}
+.form-content .card-body .button-container button:hover{
+    color: #ed2553;
+    border-color: #ed2553;
+}
+
+
+
+.form-container .alt{
+    position: absolute;
+    top: 36px;
+    left: -56px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+    transition: all .2s ease;
+
+
+}
+.form-container .alt .toggle{
+    font-size: 58px;
+    background-color: #ed2553;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    width: 140px;
+    height: 140px;
+    line-height:140px;
+    cursor: pointer;
+}
+.form-container .alt .toggle::before{
+    content: '\f040';
+    font-family: FontAwesome;
+}
+
+.form-content .alt .title,
+.form-content .alt .input-group,
+.form-content .alt .button-container {
+    opacity: 0;
+    visibility: hidden;
+} 
+.form-content .alt .title {
+    position: relative;
+    border-color: #fff;
+    color: #fff;
+}
+
+.form-content .alt .button-container button{
+    background-color: #fff;
+    border-color: #fff;
+    z-index: 1;
+    color: #757575;
+}
+.form-content .alt .button-container button:hover{
+    background: rgba(255, 255, 255, .9);
+}
+.form-content .alt .input-group label{
+    color: #d3d2d2;
+}
+.form-content .alt .input-group input{
+    color: #fff;
+}
+
+.form-content .alt .input-group .bar{
+    background-color: #fff;
+}
+
+.form-content .alt .input-group input:focus ~ .bar::after,
+.form-content .alt .input-group input:focus ~ .bar::before{
+    background-color: rgb(160, 160, 160);
+}
+/* active */
+
+
+.active .alt {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    top: 20px;
+    left: 0;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 20%);
+    border-radius: 5px 5px 0 0;
+    padding: 60px 0 40px 20px;
+}
+
+.active .alt .toggle{
+    position: absolute;
+    box-shadow: none;
+    left: 50px;
+    top: 0;
+    transform: scale(30);
+}
+
+.active .alt .toggle::before{
+    content: '';
+}
+
+.active .form-content  .alt .title,
+.active .form-content .alt .input-group,
+.active .form-content .alt .button-container{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+} 
+
+.active .form-content .alt .title{
+    transition-delay: .3s;
+}
+.active .form-content .alt .input-group:nth-child(1){
+    transition-delay: .4s;
+}
+.active .form-content .alt .input-group:nth-child(2){
+    transition-delay: .5s;
+}
+
+.active .form-content .alt .input-group:nth-child(5){
+    transition-delay: .7s;
+}
+
+.active .form-content .alt .button-container{
+    transition-delay: .9s;
+}

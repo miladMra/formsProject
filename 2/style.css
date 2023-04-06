@@ -1,0 +1,129 @@
+.form-row {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Va;
+}
+
+.from-content {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 6px rgb(0 0 0 / 10%);
+    border: 1px solid #efefef;
+    margin-top: 50px;
+    padding: 15px 15px 25px 15px;
+}
+
+@media screen and (max-width:700px) {
+    .from-content {
+        flex-direction: column;
+    }
+}
+
+.from-content .right-side,
+.left-side {
+    width: 100%
+}
+
+.social-media {
+    left: 50%;
+}
+
+.social-media i {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: #fff;
+    transition: all .2s;
+}
+
+.social-media a:nth-child(1) i {
+    color: rgb(4, 25, 185);
+}
+
+.social-media a:nth-child(2) i {
+    color: rgb(246, 22, 22);
+    margin-right: 10px;
+}
+
+.social-media a:nth-child(1) i:hover {
+    background-color: rgb(4, 25, 185);
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+}
+
+.social-media a:nth-child(2) i:hover {
+    background-color: rgb(246, 22, 22);
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+}
+
+.form {
+    margin-top: 100px;
+}
+
+.form .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    position: relative;
+}
+
+.form .remember {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form .remember label {
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+}
+
+.form .input-group label {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.form .input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #f3f2f2;
+    padding: 0 5px 8px 0;
+}
+
+.form .input-group span::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #70b7fa;
+    position: absolute;
+    transition: all .5s ease;
+}
+
+.form .input-group input:focus~span::after {
+    width: 100%;
+}
+
+.form .input-group button {
+    border: none;
+    background-color: #34dc06;
+    color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.form .input-group button:hover {
+    background-color: rgb(23, 197, 8);
+}
+
+.form .input-group button:active {
+    transform: translateY(2px);
+}

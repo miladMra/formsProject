@@ -1,0 +1,87 @@
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Vazir-medium;
+}
+.form{
+    text-align: center;
+    margin-top: 50px;
+    animation: moveToTop 1.5s ease;
+}
+@keyframes moveToTop{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+.form-content{
+    background-color: #2b4242;
+    border: 1px solid #444;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.form-title{
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+.form-content .half{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.form-content .inputs{
+    margin:55px 0;
+}
+.inputs-content {
+    width: 100%;
+    position: relative;
+}
+.inputs-content:first-of-type{
+    margin-left: 10px;
+}
+ .inputs-content input{
+    width: 100%;
+    border-color: #aaa;
+    border-width: 0 0 2px 0;
+    background-color: transparent;
+    padding: 0 10px;
+    outline: none;
+    color: #fff;
+}
+.inputs-content label{
+    color: #999;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    transition: all .5s ease;
+}
+.inputs-content input:not(:placeholder-shown) + label,.inputs-content input:focus + label{
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    border-color:#fff ;
+}
+
+.form-content button{
+    font-size: 16px;
+    padding: 10px 40px;
+    border: none;
+    background-color: #465;
+    color: #fff;
+    float: left;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .2s;
+}
+.form-content button:hover{
+    border: 1px solid #fff;
+}
+.form-content button:focus{
+    transform: translateY(4px);
+}
